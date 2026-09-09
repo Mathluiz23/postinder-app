@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Postinder Mobile",
+    "slug": "postinder-mobile",
+    "scheme": "postinder",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.postinder.mobile"
+    },
+    "ios": {
+      "bundleIdentifier": "com.postinder.mobile"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "05655c86-2c39-4539-84c4-1c8b3ecdcc3a"
+      }
+    },
+    "owner": "matheusluiz23",
+    "plugins": [
+      "expo-video",
+      "expo-audio",
+      "expo-asset"
+    ]
+  }
+}
