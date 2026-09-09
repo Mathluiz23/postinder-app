@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postinder-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: postinder
+      POSTGRES_USER: postinder
+      POSTGRES_PASSWORD: postinder
+    ports:
+      # Host 5432 já está em uso nesta máquina por outro projeto — usamos 5433.
+      - "5433:5432"
+    volumes:
+      - postinder_pgdata:/var/lib/postgresql/data
+
+volumes:
+  postinder_pgdata:
