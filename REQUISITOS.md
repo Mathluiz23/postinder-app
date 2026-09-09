@@ -6,6 +6,26 @@ Entidade parceira: Carol Beckenstein, agência prestadora de serviços de market
 
 ---
 
+## Qual a solução e como ela ajuda a entidade parceira?
+
+**Qual a solução de software para dispositivos móveis que pode auxiliar a
+entidade parceira?**
+
+Um aplicativo mobile de aprovação de conteúdo, onde a agência cria e envia
+postagens (imagem, vídeo, áudio, PDF) para o cliente aprovar, adorar ou pedir
+ajuste, direto pelo celular, sem depender de mensagens soltas.
+
+**Como o aplicativo pode auxiliar na solução da necessidade?**
+
+Hoje a Carol Beckenstein aprova conteúdo com os clientes de forma espalhada,
+por WhatsApp, e-mail e telefone. Isso mistura decisões com conversas comuns,
+não deixa histórico organizado e depende de a agência acompanhar manualmente
+quem já aprovou o quê. O aplicativo resolve isso centralizando esse processo
+num só lugar: o cliente recebe a postagem, decide com poucos toques, e a
+agência acompanha tudo num painel com fila consolidada e métricas por status.
+
+---
+
 ## 1. Introdução
 
 ### 1.1 Propósito do documento
