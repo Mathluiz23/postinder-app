@@ -1,11 +1,9 @@
 # Postinder Mobile
 
-MVP em React Native (Expo) do aplicativo mobile do Postinder, desenvolvido como
-parte do desafio acadêmico de aplicativos móveis. Consome a API REST real do
-backend Postinder (Express + PostgreSQL), com endpoints confirmados
-diretamente no código-fonte do repositório (`Postinder/Postinder`, branch
-`newStructure`, `backend/src/app.ts` e módulos `auth`, `portal`, `posts`,
-`clients`, `approvals`).
+App em React Native (Expo) do desafio acadêmico de aplicativos móveis, para
+uma agência de marketing que hoje aprova posts com clientes só via web.
+Consome a API REST do backend próprio deste projeto (pasta `backend/`,
+Express + PostgreSQL — ver `backend/README.md`).
 
 ## Estrutura
 
@@ -51,34 +49,27 @@ Detalhes de payload que valem a pena lembrar:
 
 ## Rodando localmente
 
+Pré-requisito: o backend (pasta `backend/`) já rodando — ver
+`backend/README.md`.
+
 ```bash
 cd app
 npm install
+cp .env.example .env   # ajuste EXPO_PUBLIC_API_URL para o IP da sua rede local
 npx expo start
 ```
 
 Escaneie o QR code com o app **Expo Go** (Android/iOS) ou rode num emulador.
 
-Configure a URL da API antes de rodar (arquivo `.env`):
+> Use o IP da sua máquina na rede local (ex.: `192.168.1.13`), não
+> `localhost`, para funcionar em celular físico via Expo Go — o celular
+> precisa estar na mesma rede wifi do computador. A porta padrão do backend
+> é `4000` (ver `backend/.env.example`).
 
-```
-EXPO_PUBLIC_API_URL=http://SEU_IP_LOCAL:3001
-```
+## Limitações conhecidas
 
-> Use o IP da sua máquina na rede local, não `localhost`, se for testar no
-> celular físico via Expo Go. Confirme a porta real no `docker-compose.yml`/
-> `.env.example` do backend.
-
-## O que ainda é MVP / próximos passos
-
-- Fluxo de acesso por **link mágico/token** está implementado nos serviços
-  (`fetchPublicPortal`, `approvePublicPost`, `rejectPublicPost`) mas ainda sem
-  tela própria — hoje só o fluxo autenticado (login) tem UI.
-- Viewer nativo de vídeo/áudio/PDF (`expo-av`, `react-native-webview`) —
-  hoje só imagem renderiza de fato, os demais tipos mostram placeholder.
-- Notificações push reais via `expo-notifications`, integradas ao módulo
-  `notifications` do backend (`GET/POST /api/v1/notifications`).
-- Refresh token automático no interceptor do axios ao receber 401.
-- Endpoint de fila consolidada do admin (`/api/v1/approvals/queue`) retorna
-  arquivos por post — vale reaproveitar `PostMediaViewer` também na tela do
-  admin.
+- Notificações push funcionam de ponta a ponta, mas o Expo Go no Android não
+  recebe mais push remoto (política do Google Play/FCM). Validado em iPhone
+  físico via Expo Go.
+- Refresh token é stateless (sem tabela de revogação) — ver
+  `backend/README.md`.
