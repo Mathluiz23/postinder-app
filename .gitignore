@@ -1,0 +1,23 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Expo / React Native
+.expo/
+dist/
+web-build/
+
+# Env files (segredos locais)
+.env
+.env.local
+backend/.env
+
+# Backend build output
+backend/dist/
+
+# Uploads são conteúdo de runtime, não código-fonte
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+
+# macOS
+.DS_Store
