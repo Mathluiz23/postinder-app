@@ -40,6 +40,8 @@ app/
 | Fila consolidada (admin) | `GET /api/v1/approvals/queue` |
 | Clientes (admin) | `GET /api/v1/clients` |
 | Posts (admin) | `GET/POST /api/v1/posts` |
+| Métricas por status (admin) | `GET /api/v1/metrics` |
+| Registro de push token | `POST /api/v1/notifications/register-token` |
 
 Detalhes de payload que valem a pena lembrar:
 
